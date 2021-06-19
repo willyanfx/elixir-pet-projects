@@ -46,4 +46,11 @@ defmodule CmdTodos do
     binary = :erlang.term_to_binary(tasks)
     File.write(filename, binary)
   end
+
+  def read(filename) do
+    case File.read(filename) do
+      {:ok, binary} -> :erlang.binary_to_term(binary)
+      {:error, _reason} ->  'file doesn't exist'
+    end
+  end
 end
