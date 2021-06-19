@@ -41,4 +41,9 @@ defmodule CmdTodos do
     [task] = Enum.take_random(tasks, 1)
     task
   end
+
+  def save(tasks, filename) do
+    binary = :erlang.term_to_binary(tasks)
+    File.write(filename, binary)
+  end
 end
