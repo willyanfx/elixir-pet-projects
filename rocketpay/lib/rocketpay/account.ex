@@ -19,8 +19,11 @@ defmodule Rocketpay.Account do
   end
 
   # %__MODULE__{} é uma struct vazia
-  def changeset(params) do
-    %__MODULE__{}
+  # changeset de criacao de vazia
+  #  ou changeset the update, comeca uma struct
+  # \\ é um valor default
+  def changeset(struct \\ %__MODULE__{}, params) do
+    struct
     |> cast(params, @required_params)
     |> validate_required(@required_params)
     |> check_constraint(:balance, name: :balance_must_be_positive_or_zero)
