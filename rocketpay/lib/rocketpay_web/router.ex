@@ -12,7 +12,7 @@ defmodule RocketpayWeb.Router do
 
     post "/users", UserController, :create
 
-    post "/accounts/:id/deposot", AccountsController, :deposit
+    post "/accounts/:id/deposit", AccountsController, :deposit
     post "/accounts/:id/withdraw", AccountsController, :withdraw
   end
 
