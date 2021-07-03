@@ -1,4 +1,4 @@
-defmodule RocketpayWeb.UserView do
+defmodule RocketpayWeb.UsersView do
   alias Rocketpay.{Account, User}
 
   def render("create.json", %{
