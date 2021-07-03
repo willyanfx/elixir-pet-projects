@@ -6,10 +6,10 @@ defmodule RocketpayWeb.AccountsControllerTest do
   describe "deposit/2" do
     setup %{conn: conn} do
       params = %{
-        name: "Rafael",
+        name: "willz",
         password: "123456",
-        nickname: "camarda",
-        email: "rafael@banana.com",
+        nickname: "will",
+        email: "willz@banana.com",
         age: 27
       }
 
