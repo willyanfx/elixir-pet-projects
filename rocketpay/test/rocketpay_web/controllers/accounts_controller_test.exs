@@ -65,7 +65,7 @@ defmodule RocketpayWeb.AccountsControllerTest do
       {:ok, conn: conn, account_id: account_id}
     end
 
-    test "when all params are valid, widthdraw it", %{conn: conn, account_id: account_id} do
+    test "when all params are valid, withdraw it", %{conn: conn, account_id: account_id} do
       conn
       |> post(Routes.accounts_path(conn, :deposit, account_id, %{"value" => "50.00"}))
       |> json_response(:ok)
